@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800|Kanit:300,400&display=swap');
+
+body {
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(10deg, rgba(20,30,36,1) 0%, rgba(36,45,52,1) 100%);
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+header .brainstorm {
+    width: 25%;
+    display: flex;
+    margin: 10px;
+}
+
+header .brainstorm .logo {
+    width: 36px;
+    margin: 10px;
+}
+
+header .brainstorm .logo img {
+    width: 60px;
+}
+
+.banner {
+    flex-shrink: 0;
+    flex-basis: 1;
+    height: 90px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.block {
+    width: 0%;
+    height: 40px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+    background: #ffae00;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, .06, .4, .92) forwards;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Poppins';
+    color: #fff;
+    font-size: 32px;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+span {
+    width:0px;
+    height: 0px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #ffae00;
+    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    margin-left: 15px;
+    position: absolute;
+    bottom: 3px;
+    right: -12px;
+}
+
+@keyframes mainBlock {
+    0% {
+      width: 0%;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
+  @keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #ffc320;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 10px;
+      height: 10px;
+      background: #ffc320;
+      opacity: 1;
+      bottom: 45px;
+    }
+     65% {
+        width: 7px;
+      height: 7px;
+        bottom: 0px;
+        width: 15px
+     }
+     80% {
+        width: 10px;
+      height: 10px;
+        bottom: 20px
+     }
+    100% {
+      width: 7px;
+      height: 7px;
+      background: #ffc320;
+      border: 0px solid #222;
+      bottom: 13px;
+    }
+  }
+ 
+/* MENÚ */
+
+header .menu {
+    width: 60%;
+    max-width: 1000px;
+    min-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+    align-items: center;
+    font-family: 'Kanit';
+    font-size: 1em;
+    font-weight: 400;
+}
+
+header .menu a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header .menu a:hover {
+    text-decoration-line: overline;
+    text-decoration-color: #ffc320;
+}
+
+/* MAIN */
+
+.main  {
+    width: 80%;
+    height: 200px;
+}
+
+/* CONTENT */
+
+.content {
+    width: 80%;
+    height: 450px;
+}
+
+/* WAVES */
+
+.waves {
+    position:relative;
+    width:100%;
+    height:10vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+}
+
+/* FOOTER */
+
+footer {   
+    position:relative;
+    width:100%;
+    height: 100px;
+    text-align:center;
+    background-color: white;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+  }
