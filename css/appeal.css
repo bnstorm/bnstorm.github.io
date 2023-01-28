@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800|Kanit:300,400&display=swap');
 
+:root {
+  /* Paleta de colores */
+  --buebito-fulgurante: rgba(0, 210, 222, 1);
+  --azul-buebito: rgba(0, 164, 200, 1);
+  --rojo-puta: rgba(200, 0, 0, 1);
+  --relampago: rgba(250, 220, 0, 1);
+  --5-puntos: rgba(250, 180, 0, 1);
+  --hematoma: rgba(80,60,200,1);
+
+}
+
 body {
     margin:0;
     padding: 0;
@@ -11,18 +22,23 @@ body {
 
 .container {
     width: 100%;
-    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    background: linear-gradient(60deg, rgba(80,60,200,1) 0%, var(--buebito-fulgurante) 100%);
 }
 
 /* HEADER */
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100px;
     background: linear-gradient(10deg, rgba(20,30,36,1) 0%, rgba(36,45,52,1) 100%);
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
+    transition: 0.6s;
+    box-shadow: 0px 1px 5px 3px rgba(21, 21, 26, 0.2);
 }
 
 header .brainstorm {
@@ -64,7 +80,7 @@ header .brainstorm .logo img {
     margin-bottom: 10px;
     -webkit-border-radius: 0%;
     border-radius: 0%;
-    background: #ffae00;
+    background: var(--5-puntos);
     position: absolute;
     animation: mainBlock 2s cubic-bezier(0.74, .06, .4, .92) forwards;
     display: flex;
@@ -89,7 +105,7 @@ span {
     height: 0px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background: #ffae00;
+    background: var(--5-puntos);
     -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
     animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
     animation-delay: 2s;
@@ -127,14 +143,14 @@ span {
     0% {
       width: 0px;
       height: 0px;
-      background: #ffc320;
+      background: var(--relampago);
       border: 0px solid #ddd;
       opacity: 0;
     }
     50% {
       width: 10px;
       height: 10px;
-      background: #ffc320;
+      background: var(--5-puntos);
       opacity: 1;
       bottom: 45px;
     }
@@ -152,7 +168,7 @@ span {
     100% {
       width: 7px;
       height: 7px;
-      background: #ffc320;
+      background: var(--5-puntos);
       border: 0px solid #222;
       bottom: 13px;
     }
@@ -180,21 +196,21 @@ header .menu a {
 
 header .menu a:hover {
     text-decoration-line: overline;
-    text-decoration-color: #ffc320;
+    text-decoration-color: var(--5-puntos);
 }
 
 /* MAIN */
 
 .main  {
     width: 80%;
-    height: 200px;
+    height: 400px;
 }
 
 /* CONTENT */
 
 .content {
     width: 80%;
-    height: 450px;
+    height: 600px;
 }
 
 /* WAVES */
@@ -213,11 +229,94 @@ header .menu a:hover {
 footer {   
     position:relative;
     width:100%;
-    height: 100px;
+    height: 50px;
     text-align:center;
-    background-color: white;
-    font-size: 0.8em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: whitesmoke;
+    font-size: 0.6em;
     font-weight: 300;
+}
+
+/* COOKIES */
+.aviso-cookies {
+  display: none;
+	background: #fff;
+	padding: 20px;
+	width: calc(100% - 40px);
+	max-width: 300px;
+	line-height: 150%;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 100;
+	padding-top: 60px;
+	box-shadow: 0px 2px 10px 10px rgba(21, 21, 21, 0.21);
+	text-align: center;
+}
+
+
+.aviso-cookies.activo {
+	display: block;
+}
+
+.aviso-cookies .cookie {
+	max-width: 100px;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+.aviso-cookies .titulo,
+.aviso-cookies .parrafo {
+	margin-bottom: 15px;
+}
+
+.aviso-cookies .boton {
+	width: 100%;
+	background: var(--azul-buebito);
+	border: none;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding: 15px 20px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+
+.aviso-cookies .boton:hover {
+	background: var(--buebito-fulgurante);
+}
+
+.aviso-cookies .enlace {
+	color: var(--azul-buebito);
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.aviso-cookies .enlace:hover {
+	text-decoration: underline;
+}
+
+.fondo-aviso-cookies {
+	display: none;
+	background: rgba(0,0,0,.20);
+	position: fixed;
+	z-index: 99;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.fondo-aviso-cookies.activo {
+	display: block;
 }
 
 /* Animation */
