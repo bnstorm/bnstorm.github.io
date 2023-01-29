@@ -8,27 +8,26 @@
     <link rel="stylesheet" href="/css/appeal.css">
 </head>
 <body>
-    <div class="container flex">
-        <!-- Header begins -->
-        <header>
-            <div class="brainstorm">
-                <div class="logo"><img src="/media/Brainstorm.png" alt="Brainstorm"></div>
-                <div class="banner">
-                    <div class="title">
-                        <span class="block"></span>
-                        <h1>Brainstorm<span></span></h1>
-                    </div>
+     <header>
+        <div class="brainstorm">
+            <div class="logo"><img src="/media/Brainstorm.png" alt="Brainstorm"></div>
+            <div class="banner">
+                <div class="title">
+                    <span class="block"></span>
+                    <h1>Brainstorm<span></span></h1>
                 </div>
             </div>
+        </div>
 
-            <nav class="menu">
-                <a href="index.html">Inicio</a>
-                <a href="template.html">Cursos</a>
-                <a href="workflow.html">Materias</a>
-                <a href="#">Contacto</a>
-            </nav>
-        </header>
-        <!-- Header ends -->
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="template.html">Cursos</a>
+            <a href="workflow.html">Materias</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container flex">
 
         <!-- Main begins -->
         <section class="main"></section>
@@ -63,7 +62,15 @@
         <h3 class="titulo">Cookies</h3>
         <p class="parrafo"> Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
         <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
-        <a class="enlace" href="aviso-cookies.html">Aviso de cookies</a>
+        
+        <a class="enlace" href="aviso-cookies.html">
+            <button class="btn-enlace-cookies">
+                <span class="circle">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="btn-texto">Aviso de cookies</span>
+            </button>
+        </a>
         <script src="/javascript/aviso-cookies.js"></script>
     </div>
 </body>
