@@ -191,7 +191,7 @@ header .menu a {
 
 header .menu a:hover {
     text-decoration-line: overline;
-    text-decoration-color: var(--5-puntos);
+    text-decoration-color: var(--five-dots);
 }
 
 .container {
@@ -427,8 +427,21 @@ button:hover .btn-texto {
     }
   }
   /*Shrinking for mobile*/
-  @media (max-width: 768px) {
-    .waves {
+  @media screen and (max-width: 800px) {
+    header {
+      height: 140px;
+    }
+    header .brainstorm {
+      width: 100%;
+      margin: 0;
+      justify-content: center;
+    }
+    
+  header .menu {
+    width: 100%;
+  }
+  
+  .waves {
       height:40px;
       min-height:40px;
     }
